@@ -76,7 +76,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\KeyImage.png" />
+    <None Include="Resources\LockKeyImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnlockKeyImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,9 +63,19 @@ namespace ChildLock.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap KeyImage {
+        internal static System.Drawing.Bitmap LockKeyImage {
             get {
-                object obj = ResourceManager.GetObject("KeyImage", resourceCulture);
+                object obj = ResourceManager.GetObject("LockKeyImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap UnlockKeyImage {
+            get {
+                object obj = ResourceManager.GetObject("UnlockKeyImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
