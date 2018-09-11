@@ -92,8 +92,7 @@ namespace ChildLock
             {
                 if (lockState == LockState.Lock)
                 {
-                    lockState = LockState.Unlocking;
-                    unlockCount = 0;
+                    SetLockState(LockState.Unlocking);
                 }
                 else if (lockState == LockState.Unlock)
                 {
@@ -126,19 +125,44 @@ namespace ChildLock
                     unlockCount++;
                     if (unlockCount >= unlockKeyWord.Length)
                     {
-                        lockState = LockState.Unlock;
-                        keyBitmap = Properties.Resources.UnlockKeyImage;
-                        Invalidate();
+                        SetLockState(LockState.Unlock);
                     }
                 }
                 else
                 {
-                    lockState = LockState.Lock;
+                    SetLockState(LockState.Lock);
                 }
             }
 
         }
 
+        /// <summary>
+        /// ロック状態を設定する.
+        /// </summary>
+        /// <param name="newLockState">新しい状態</param>
+        private void SetLockState(LockState newLockState)
+        {
+            switch (newLockState)
+            {
+                case LockState.Lock:
+                    keyBitmap = Properties.Resources.LockKeyImage;
+                    break;
+                case LockState.Unlocking:
+                    keyBitmap = Properties.Resources.UnlockingKeyImage;
+                    unlockCount = 0;
+                    break;
+                case LockState.Unlock:
+                    keyBitmap = Properties.Resources.UnlockKeyImage;
+                    break;
+            }
+
+            lockState = newLockState;
+            Invalidate();
+        }
+
+        /// <summary>
+        /// ロック状態.
+        /// </summary>
         private enum LockState
         {
             Lock,

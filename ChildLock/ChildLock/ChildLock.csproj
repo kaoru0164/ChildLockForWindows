@@ -81,5 +81,8 @@
   <ItemGroup>
     <None Include="Resources\UnlockKeyImage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnlockingKeyImage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
