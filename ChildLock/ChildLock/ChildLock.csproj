@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\AnimationObject.cs" />
+    <Compile Include="Animation\AnimationObjectFactory.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,16 +1,22 @@
-﻿using System;
-using System.ComponentModel;
-using System.Windows.Forms;
+﻿using ChildLock.Animation;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace ChildLock
 {
     class FormMain : Form
     {
         /// <summary>
+        /// アニメーション用タイマー.
+        /// </summary>
+        private Timer animationTimer;
+
+        /// <summary>
         /// キーボードフックの制御.
         /// </summary>
-        private KeyboardHook keybordHook = new KeyboardHook();
+        private KeyboardHook keybordHook;
 
 
         /// <summary>
@@ -26,6 +32,10 @@ namespace ChildLock
         /// </summary>
         private int unlockCount;
 
+        /// <summary>
+        /// 画面のサイズ.
+        /// </summary>
+        private Rectangle screenRectangle;
         /// <summary>
         /// 背景画像.
         /// </summary>
@@ -45,6 +55,11 @@ namespace ChildLock
         private Point keyPoint;
 
         /// <summary>
+        /// アニメーション用オブジェクトのリスト.
+        /// </summary>
+        private List<AnimationObject> animationObjectList;
+
+        /// <summary>
         /// コンストラクタ.
         /// </summary>
         public FormMain()
@@ -56,7 +71,15 @@ namespace ChildLock
             WindowState = FormWindowState.Maximized;
             TopMost = true;
 
+            animationTimer = new Timer();
+            animationTimer.Interval = 30;
+            animationTimer.Tick += AnimationTimer_Tick;
+
+            keybordHook = new KeyboardHook();
+
             lockState = LockState.Lock;
+
+            animationObjectList = new List<AnimationObject>();
         }
 
         protected override void OnLoad(EventArgs e)
@@ -65,21 +88,24 @@ namespace ChildLock
             keybordHook.OnKeyPress += KeybordHook_OnKeyPress;
             keybordHook.Start();
 
-            Rectangle screenRectangle = Screen.PrimaryScreen.Bounds;
+            screenRectangle = Screen.PrimaryScreen.Bounds;
 
             backgroundBitmap = new Bitmap(screenRectangle.Width, screenRectangle.Height);
             Graphics graphics = Graphics.FromImage(backgroundBitmap);
             graphics.CopyFromScreen(new Point(0, 0), new Point(0, 0), backgroundBitmap.Size);
             graphics.Dispose();
-            backgroundPoint = new Point(0, 0);
 
             keyBitmap = Properties.Resources.LockKeyImage;
             keyPoint = new Point(screenRectangle.Width - keyBitmap.Width - 10, 10);
+
+            animationTimer.Start();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
+
+            animationTimer.Stop();
             keybordHook.Stop();
         }
 
@@ -107,9 +133,41 @@ namespace ChildLock
         {
             base.OnPaint(e);
 
-            e.Graphics.DrawImage(backgroundBitmap, backgroundPoint);
+            e.Graphics.DrawImage(backgroundBitmap, 0, 0);
+
+            foreach (var animationObject in animationObjectList)
+            {
+                animationObject.Draw(e.Graphics);
+            }
 
             e.Graphics.DrawImage(keyBitmap, keyPoint);
+        }
+
+        /// <summary>
+        /// アニメーション用タイマー.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AnimationTimer_Tick(object sender, EventArgs e)
+        {
+            List<AnimationObject> finishedObjectList = new List<AnimationObject>();
+
+            foreach (var animationObject in animationObjectList)
+            {
+                animationObject.Update();
+                if (animationObject.IsFinished)
+                {
+                    finishedObjectList.Add(animationObject);
+                }
+            }
+
+            foreach (var finishedObject in finishedObjectList)
+            {
+                animationObjectList.Remove(finishedObject);
+            }
+
+            Invalidate();
+
         }
 
         /// <summary>
@@ -118,6 +176,8 @@ namespace ChildLock
         /// <param name="key">押されたキー</param>
         private void KeybordHook_OnKeyPress(Keys key)
         {
+            animationObjectList.Add(AnimationObjectFactory.CreateAnimationObject(screenRectangle, key.ToString()));
+
             if (lockState == LockState.Unlocking)
             {
                 if (key.ToString().Equals(unlockKeyWord[unlockCount].ToString()))
