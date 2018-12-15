@@ -84,5 +84,125 @@
   <ItemGroup>
     <None Include="Resources\UnlockingKeyImage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Airplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Airship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ambulance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bulldozer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Butterfly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLoud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excavator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireEngine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forklift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globefish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Helicopter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HotAirBalloon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mantis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MixerTruck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monkfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacificSaury.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PatrolCar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pigeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salmon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SchoolBus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seagull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShootingStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpaceShuttle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Submarine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sunfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swallow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThunderCloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UFO.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

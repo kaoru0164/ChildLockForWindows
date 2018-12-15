@@ -127,4 +127,124 @@
   <data name="UnlockKeyImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UnlockKeyImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Airplane" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Airplane.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Airship" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Airship.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ambulance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ambulance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bulldozer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bulldozer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Butterfly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CLoud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CLoud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cloud2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Crab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Excavator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Excavator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FireEngine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FireEngine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forklift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forklift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ghost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ghost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Globefish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Globefish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Helicopter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Helicopter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HotAirBalloon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HotAirBalloon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jellyfish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jellyfish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mantis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mantis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MixerTruck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MixerTruck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Monkfish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Monkfish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PacificSaury" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PacificSaury.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PatrolCar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PatrolCar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pigeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pigeon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rocket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rocket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Salmon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Salmon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SchoolBus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SchoolBus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Seagull" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Seagull.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShootingStar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShootingStar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Snails" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snails.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpaceShuttle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpaceShuttle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Submarine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Submarine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sunfish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sunfish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Swallow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Swallow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Taxi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Taxi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThunderCloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThunderCloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Truck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Truck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UFO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UFO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
