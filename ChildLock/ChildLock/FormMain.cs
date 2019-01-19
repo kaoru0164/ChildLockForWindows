@@ -40,10 +40,6 @@ namespace ChildLock
         /// 背景画像.
         /// </summary>
         private Bitmap backgroundBitmap;
-        /// <summary>
-        /// 背景画像の表示位置.
-        /// </summary>
-        private Point backgroundPoint;
 
         /// <summary>
         /// キー画像.
@@ -54,6 +50,10 @@ namespace ChildLock
         /// </summary>
         private Point keyPoint;
 
+        /// <summary>
+        /// アニメーションオブジェクトの生成.
+        /// </summary>
+        private AnimationObjectFactory animationObjectFactory;
         /// <summary>
         /// アニメーション用オブジェクトのリスト.
         /// </summary>
@@ -97,6 +97,9 @@ namespace ChildLock
 
             keyBitmap = Properties.Resources.LockKeyImage;
             keyPoint = new Point(screenRectangle.Width - keyBitmap.Width - 10, 10);
+
+            animationObjectFactory = new AnimationObjectFactory(screenRectangle);
+            animationObjectList.Add(animationObjectFactory.CreateBackgroundObject());
 
             animationTimer.Start();
         }
@@ -176,7 +179,7 @@ namespace ChildLock
         /// <param name="key">押されたキー</param>
         private void KeybordHook_OnKeyPress(Keys key)
         {
-            animationObjectList.Add(AnimationObjectFactory.CreateAnimationObject(screenRectangle, key.ToString()));
+            //animationObjectList.Add(AnimationObjectFactory.CreateAnimationObject(screenRectangle, key.ToString()));
 
             if (lockState == LockState.Unlocking)
             {
