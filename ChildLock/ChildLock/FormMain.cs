@@ -179,7 +179,7 @@ namespace ChildLock
         /// <param name="key">押されたキー</param>
         private void KeybordHook_OnKeyPress(Keys key)
         {
-            //animationObjectList.Add(AnimationObjectFactory.CreateAnimationObject(screenRectangle, key.ToString()));
+            animationObjectList.Add(animationObjectFactory.CreateAnimationObject(key.ToString()));
 
             if (lockState == LockState.Unlocking)
             {
