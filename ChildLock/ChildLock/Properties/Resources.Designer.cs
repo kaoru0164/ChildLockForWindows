@@ -153,9 +153,9 @@ namespace ChildLock.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap CLoud {
+        internal static System.Drawing.Bitmap Cloud {
             get {
-                object obj = ResourceManager.GetObject("CLoud", resourceCulture);
+                object obj = ResourceManager.GetObject("Cloud", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

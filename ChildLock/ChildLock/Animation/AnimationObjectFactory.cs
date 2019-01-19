@@ -52,52 +52,57 @@ namespace ChildLock.Animation
         /// <returns>アニメーションオブジェクト</returns>
         public AnimationObject CreateAnimationObject(string key)
         {
-            AnimationObject createObject;
+            AnimationObject createdObject;
             switch (key)
             {
                 case "A":
-                    createObject = new Car(Car.CarType.Ambulance, screenRectangle, roadPosition);
+                    createdObject = new Car(Car.CarType.Ambulance, screenRectangle, roadPosition);
                     break;
                 case "B":
                     if (random.Next(2) == 0)
                     {
-                        createObject = new Car(Car.CarType.Bus, screenRectangle, roadPosition);
+                        createdObject = new Car(Car.CarType.Bus, screenRectangle, roadPosition);
                     }
                     else
                     {
-                        createObject = new Car(Car.CarType.SchoolBus, screenRectangle, roadPosition);
+                        createdObject = new Car(Car.CarType.SchoolBus, screenRectangle, roadPosition);
                     }
                     break;
                 case "C":
-                    createObject = new Car(Car.CarType.Bulldozer, screenRectangle, roadPosition);
-                    break;
-                case "D":
-                    createObject = new Car(Car.CarType.Excavator, screenRectangle, roadPosition);
-                    break;
-                case "E":
-                    createObject = new Car(Car.CarType.Forklift, screenRectangle, roadPosition);
+                    createdObject = new Cloud(screenRectangle);
                     break;
                 case "F":
-                    createObject = new Car(Car.CarType.FireEngine, screenRectangle, roadPosition);
+                    createdObject = new Car(Car.CarType.FireEngine, screenRectangle, roadPosition);
                     break;
+
+                case "G":
+                    createdObject = new Car(Car.CarType.Bulldozer, screenRectangle, roadPosition);
+                    break;
+                case "H":
+                    createdObject = new Car(Car.CarType.Excavator, screenRectangle, roadPosition);
+                    break;
+                case "I":
+                    createdObject = new Car(Car.CarType.Forklift, screenRectangle, roadPosition);
+                    break;
+
                 case "P":
-                    createObject = new Car(Car.CarType.PatrolCar, screenRectangle, roadPosition);
+                    createdObject = new Car(Car.CarType.PatrolCar, screenRectangle, roadPosition);
                     break;
                 case "T":
                     if (random.Next(2) == 0)
                     {
-                        createObject = new Car(Car.CarType.Truck, screenRectangle, roadPosition);
+                        createdObject = new Car(Car.CarType.Truck, screenRectangle, roadPosition);
                     }
                     else
                     {
-                        createObject = new Car(Car.CarType.MixerTruck, screenRectangle, roadPosition);
+                        createdObject = new Car(Car.CarType.MixerTruck, screenRectangle, roadPosition);
                     }
                     break;
                 default:
-                    createObject = new Car(Car.CarType.Taxi, screenRectangle, roadPosition);
+                    createdObject = new Car(Car.CarType.Taxi, screenRectangle, roadPosition);
                     break;
             }
-            return createObject;
+            return createdObject;
         }
     }
 }

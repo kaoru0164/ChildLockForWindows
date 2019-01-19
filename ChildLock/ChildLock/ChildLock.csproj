@@ -50,6 +50,7 @@
     <Compile Include="Animation\AnimationObjectFactory.cs" />
     <Compile Include="Animation\Background.cs" />
     <Compile Include="Animation\Car.cs" />
+    <Compile Include="Animation\Cloud.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,7 +117,7 @@
     <None Include="Resources\Chicken.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CLoud.png" />
+    <None Include="Resources\Cloud.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cloud2.png" />

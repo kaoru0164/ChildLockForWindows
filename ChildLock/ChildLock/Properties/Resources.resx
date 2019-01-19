@@ -154,7 +154,7 @@
   <data name="Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CLoud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CLoud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cloud2" type="System.Resources.ResXFileRef, System.Windows.Forms">
