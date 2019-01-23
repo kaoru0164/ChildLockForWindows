@@ -102,6 +102,9 @@ namespace ChildLock.Animation
                         createdObject = new Car(Car.CarType.MixerTruck, screenRectangle, roadPosition);
                     }
                     break;
+                case "U":
+                    createdObject = new Ufo(screenRectangle, roadPosition);
+                    break;
                 default:
                     createdObject = new Car(Car.CarType.Taxi, screenRectangle, roadPosition);
                     break;
