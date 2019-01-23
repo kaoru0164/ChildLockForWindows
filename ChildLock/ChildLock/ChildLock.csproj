@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation\Airplane.cs" />
     <Compile Include="Animation\AnimationObject.cs" />
     <Compile Include="Animation\AnimationObjectFactory.cs" />
     <Compile Include="Animation\Background.cs" />

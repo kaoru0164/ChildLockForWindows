@@ -53,6 +53,7 @@ namespace ChildLock.Animation
         public AnimationObject CreateAnimationObject(string key)
         {
             AnimationObject createdObject;
+
             switch (key)
             {
                 case "A":
@@ -87,6 +88,9 @@ namespace ChildLock.Animation
 
                 case "P":
                     createdObject = new Car(Car.CarType.PatrolCar, screenRectangle, roadPosition);
+                    break;
+                case "S":
+                    createdObject = new Airplane(screenRectangle, roadPosition);
                     break;
                 case "T":
                     if (random.Next(2) == 0)
