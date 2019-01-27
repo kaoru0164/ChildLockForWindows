@@ -108,6 +108,9 @@ namespace ChildLock.Animation
                 case "V":
                     createdObject = new Submarine(screenRectangle, groundPosition);
                     break;
+                case "Z":
+                    createdObject = new Chicken(screenRectangle, groundPosition);
+                    break;
                 default:
                     createdObject = new Car(Car.CarType.Taxi, screenRectangle, roadPosition);
                     break;
