@@ -1,10 +1,21 @@
 ﻿using System;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace ChildLock.Animation
 {
     class AnimationObjectFactory
     {
+        /// <summary>
+        /// アニメーションオブジェクト生成のデリゲート.
+        /// </summary>
+        /// <returns>アニメーションオブジェクト</returns>
+        private delegate AnimationObject CreateAnimationObjectDelegate();
+        /// <summary>
+        /// アニメーションオブジェクトの生成リスト.
+        /// </summary>
+        private List<CreateAnimationObjectDelegate> animationObjectCreatorList;
+
         /// <summary>
         /// スクリーンサイズ.
         /// </summary>
@@ -33,6 +44,20 @@ namespace ChildLock.Animation
             roadPosition = (screenRectangle.Height / 3) * 2;
             groundPosition = roadPosition + 200;
 
+            animationObjectCreatorList = new List<CreateAnimationObjectDelegate>();
+            animationObjectCreatorList.Add(CreateAirplane);
+            animationObjectCreatorList.Add(CreateUfo);
+            animationObjectCreatorList.Add(CreateCloud);
+            animationObjectCreatorList.Add(CreateChicken);
+            animationObjectCreatorList.Add(CreateSubmarine);
+            animationObjectCreatorList.Add(CreateAmbulance);
+            animationObjectCreatorList.Add(CreateFireEngine);
+            animationObjectCreatorList.Add(CreatePatrolCar);
+            animationObjectCreatorList.Add(CreateTaxi);
+            animationObjectCreatorList.Add(CreateBus);
+            animationObjectCreatorList.Add(CreateTruck);
+            animationObjectCreatorList.Add(CreateSpecialVehicle);
+
             random = new Random();
         }
 
@@ -52,70 +77,106 @@ namespace ChildLock.Animation
         /// <returns>アニメーションオブジェクト</returns>
         public AnimationObject CreateAnimationObject(string key)
         {
-            AnimationObject createdObject;
-
-            switch (key)
+            if (key.Equals("Z"))
             {
-                case "A":
-                    createdObject = new Car(Car.CarType.Ambulance, screenRectangle, roadPosition);
-                    break;
-                case "B":
-                    if (random.Next(2) == 0)
-                    {
-                        createdObject = new Car(Car.CarType.Bus, screenRectangle, roadPosition);
-                    }
-                    else
-                    {
-                        createdObject = new Car(Car.CarType.SchoolBus, screenRectangle, roadPosition);
-                    }
-                    break;
-                case "C":
-                    createdObject = new Cloud(screenRectangle);
-                    break;
-                case "F":
-                    createdObject = new Car(Car.CarType.FireEngine, screenRectangle, roadPosition);
-                    break;
+                return new Chicken(screenRectangle, groundPosition);
+            }
 
-                case "G":
-                    createdObject = new Car(Car.CarType.Bulldozer, screenRectangle, roadPosition);
-                    break;
-                case "H":
-                    createdObject = new Car(Car.CarType.Excavator, screenRectangle, roadPosition);
-                    break;
-                case "I":
+
+            return animationObjectCreatorList[random.Next(animationObjectCreatorList.Count)]();
+        }
+
+        // ここから下はアニメーションオブジェクト生成用メソッド群(Delegateで使用)
+        public AnimationObject CreateAirplane()
+        {
+            return new Airplane(screenRectangle, roadPosition);
+        }
+
+        public AnimationObject CreateUfo()
+        {
+            return new Ufo(screenRectangle, roadPosition);
+        }
+
+        public AnimationObject CreateCloud()
+        {
+            return new Cloud(screenRectangle);
+        }
+
+        public AnimationObject CreateChicken()
+        {
+            return new Chicken(screenRectangle, groundPosition);
+        }
+
+        public AnimationObject CreateSubmarine()
+        {
+            return new Submarine(screenRectangle, groundPosition);
+        }
+
+        public AnimationObject CreateAmbulance()
+        {
+            return new Car(Car.CarType.Ambulance, screenRectangle, roadPosition);
+        }
+
+        public AnimationObject CreateFireEngine()
+        {
+            return new Car(Car.CarType.FireEngine, screenRectangle, roadPosition);
+        }
+
+        public AnimationObject CreatePatrolCar()
+        {
+            return new Car(Car.CarType.PatrolCar, screenRectangle, roadPosition);
+        }
+
+        public AnimationObject CreateTaxi()
+        {
+            return new Car(Car.CarType.Taxi, screenRectangle, roadPosition);
+        }
+
+        public AnimationObject CreateBus()
+        {
+            AnimationObject createdObject;
+            if (random.Next(2) == 0)
+            {
+                createdObject = new Car(Car.CarType.Bus, screenRectangle, roadPosition);
+            }
+            else
+            {
+                createdObject = new Car(Car.CarType.SchoolBus, screenRectangle, roadPosition);
+            }
+            return createdObject;
+        }
+        
+        public AnimationObject CreateTruck()
+        {
+            AnimationObject createdObject;
+            if (random.Next(2) == 0)
+            {
+                createdObject = new Car(Car.CarType.Truck, screenRectangle, roadPosition);
+            }
+            else
+            {
+                createdObject = new Car(Car.CarType.MixerTruck, screenRectangle, roadPosition);
+            }
+            return createdObject;
+        }
+
+        public AnimationObject CreateSpecialVehicle()
+        {
+            AnimationObject createdObject;
+            switch (random.Next(3))
+            {
+                case 0:
                     createdObject = new Car(Car.CarType.Forklift, screenRectangle, roadPosition);
                     break;
-
-                case "P":
-                    createdObject = new Car(Car.CarType.PatrolCar, screenRectangle, roadPosition);
-                    break;
-                case "S":
-                    createdObject = new Airplane(screenRectangle, roadPosition);
-                    break;
-                case "T":
-                    if (random.Next(2) == 0)
-                    {
-                        createdObject = new Car(Car.CarType.Truck, screenRectangle, roadPosition);
-                    }
-                    else
-                    {
-                        createdObject = new Car(Car.CarType.MixerTruck, screenRectangle, roadPosition);
-                    }
-                    break;
-                case "U":
-                    createdObject = new Ufo(screenRectangle, roadPosition);
-                    break;
-                case "V":
-                    createdObject = new Submarine(screenRectangle, groundPosition);
-                    break;
-                case "Z":
-                    createdObject = new Chicken(screenRectangle, groundPosition);
+                case 1:
+                    createdObject = new Car(Car.CarType.Excavator, screenRectangle, roadPosition);
                     break;
                 default:
-                    createdObject = new Car(Car.CarType.Taxi, screenRectangle, roadPosition);
+                    createdObject = new Car(Car.CarType.Bulldozer, screenRectangle, roadPosition);
                     break;
             }
             return createdObject;
         }
+
     }
 }
