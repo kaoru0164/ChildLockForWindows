@@ -21,6 +21,10 @@ namespace ChildLock.Animation
         /// </summary>
         private Rectangle screenRectangle;
         /// <summary>
+        /// 高速道路の位置.
+        /// </summary>
+        private int highwayPosition;
+        /// <summary>
         /// 道路の位置.
         /// </summary>
         private int roadPosition;
@@ -42,6 +46,7 @@ namespace ChildLock.Animation
         {
             this.screenRectangle = screenRectangle;
             roadPosition = (screenRectangle.Height / 3) * 2;
+            highwayPosition = roadPosition - 200;
             groundPosition = roadPosition + 200;
 
             animationObjectCreatorList = new List<CreateAnimationObjectDelegate>();
@@ -67,7 +72,7 @@ namespace ChildLock.Animation
         /// <returns>背景用アニメーションオブジェクト</returns>
         public AnimationObject CreateBackgroundObject()
         {
-            return new Background(screenRectangle, roadPosition, groundPosition);
+            return new Background(screenRectangle, highwayPosition, roadPosition, groundPosition);
         }
 
         /// <summary>
@@ -89,12 +94,12 @@ namespace ChildLock.Animation
         // ここから下はアニメーションオブジェクト生成用メソッド群(Delegateで使用)
         public AnimationObject CreateAirplane()
         {
-            return new Airplane(screenRectangle, roadPosition);
+            return new Airplane(screenRectangle, highwayPosition);
         }
 
         public AnimationObject CreateUfo()
         {
-            return new Ufo(screenRectangle, roadPosition);
+            return new Ufo(screenRectangle, highwayPosition);
         }
 
         public AnimationObject CreateCloud()
@@ -114,22 +119,22 @@ namespace ChildLock.Animation
 
         public AnimationObject CreateAmbulance()
         {
-            return new Car(Car.CarType.Ambulance, screenRectangle, roadPosition);
+            return new Car(Car.CarType.Ambulance, screenRectangle, highwayPosition);
         }
 
         public AnimationObject CreateFireEngine()
         {
-            return new Car(Car.CarType.FireEngine, screenRectangle, roadPosition);
+            return new Car(Car.CarType.FireEngine, screenRectangle, highwayPosition);
         }
 
         public AnimationObject CreatePatrolCar()
         {
-            return new Car(Car.CarType.PatrolCar, screenRectangle, roadPosition);
+            return new Car(Car.CarType.PatrolCar, screenRectangle, highwayPosition);
         }
 
         public AnimationObject CreateTaxi()
         {
-            return new Car(Car.CarType.Taxi, screenRectangle, roadPosition);
+            return new Car(Car.CarType.Taxi, screenRectangle, highwayPosition);
         }
 
         public AnimationObject CreateBus()
@@ -137,11 +142,11 @@ namespace ChildLock.Animation
             AnimationObject createdObject;
             if (random.Next(2) == 0)
             {
-                createdObject = new Car(Car.CarType.Bus, screenRectangle, roadPosition);
+                createdObject = new Car(Car.CarType.Bus, screenRectangle, highwayPosition);
             }
             else
             {
-                createdObject = new Car(Car.CarType.SchoolBus, screenRectangle, roadPosition);
+                createdObject = new Car(Car.CarType.SchoolBus, screenRectangle, highwayPosition);
             }
             return createdObject;
         }

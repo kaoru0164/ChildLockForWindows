@@ -6,6 +6,10 @@ namespace ChildLock.Animation
     class Background : AnimationObject
     {
         /// <summary>
+        /// 高速道路の位置.
+        /// </summary>
+        private Rectangle highwayRectangle;
+        /// <summary>
         /// 道路の描画位置.
         /// </summary>
         private Rectangle roadRectangle;
@@ -29,10 +33,11 @@ namespace ChildLock.Animation
         /// <param name="screenRectangle">画面のサイズ</param>
         /// <param name="roadPosition">道路の位置</param>
         /// <param name="groundPosition">地面の位置</param>
-        public Background(Rectangle screenRectangle, int roadPosition, int groundPosition)
+        public Background(Rectangle screenRectangle, int highwayPosition, int roadPosition, int groundPosition)
         {
             const int lineHeight = 1;
 
+            highwayRectangle = new Rectangle(0, highwayPosition, screenRectangle.Width, lineHeight);
             roadRectangle = new Rectangle(0, roadPosition, screenRectangle.Width, lineHeight);
             roadBrush = new SolidBrush(Color.DarkGray);
 
@@ -47,6 +52,7 @@ namespace ChildLock.Animation
 
         public override void Draw(Graphics graphics)
         {
+            graphics.FillRectangle(roadBrush, highwayRectangle);
             graphics.FillRectangle(roadBrush, roadRectangle);
             graphics.FillRectangle(groundBrush, groundRectangle);
         }
